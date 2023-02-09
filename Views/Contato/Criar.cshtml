@@ -1,0 +1,107 @@
+﻿@model ContatoModel
+
+@{
+    ViewData["Title"] = "Criar contato";
+}
+<div class="text-center">
+
+    <h1 class="display-4">Cadastrar contato</h1>
+
+</div>
+
+<form asp-controller="Contato" asp-action="Criar" method="post">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do contato">
+        @Html.ValidationMessageFor(x => x.Nome)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">RG</label>
+        <input type="text" asp-for="Rg" class="form-control" placeholder="Digite o RG do contato">
+        @Html.ValidationMessageFor(x => x.Rg)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">CPF</label>
+        <input type="text" asp-for="Cpf" class="form-control" placeholder="Digite o CPF do contato">
+        @Html.ValidationMessageFor(x => x.Cpf)
+    </div>
+
+     <div class="mb-3">
+        <label for="nome" class="form-label">Endereço</label>
+        <input type="text" asp-for="Endereco" class="form-control" placeholder="Digite o Endereço do contato">
+        @Html.ValidationMessageFor(x => x.Endereco)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">CEP</label>
+        <input type="text" asp-for="Cep" class="form-control" placeholder="Digite o CEP do contato">
+        @Html.ValidationMessageFor(x => x.Cep)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Bairro</label>
+        <input type="text" asp-for="Bairro" class="form-control" placeholder="Digite o Bairro do contato">
+        @Html.ValidationMessageFor(x => x.Bairro)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Cidade</label>
+        <input type="text" asp-for="Cidade" class="form-control" placeholder="Digite a Cidade do contato">
+        @Html.ValidationMessageFor(x => x.Cidade)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Data de nascimento </label>
+        <input type="date" asp-for="DataNascimento" class="form-control">
+        @Html.ValidationMessageFor(x => x.DataNascimento)
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="text" asp-for="Email" class="form-control" placeholder="Digite o E-mail do contato">
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+
+    <div class="mb-3">
+        <label for="telefoneResidencial" class="form-label">Telefone residencial</label>
+        <input type="text" asp-for="TelefoneResidencial" class="form-control" placeholder="Digite o telefone residencial do contato">
+        @Html.ValidationMessageFor(x => x.TelefoneResidencial)
+    </div>
+
+    <div class="mb-3">
+        <label for="telefoneComerial" class="form-label">Telefone comercial</label>
+        <input type="text" asp-for="TelefoneComercial" class="form-control" placeholder="Digite o telefone comercial do contato">
+    </div>
+
+    <div class="mb-3">
+        <label for="celular" class="form-label">Celular</label>
+        <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o celular do contato">
+        @Html.ValidationMessageFor(x => x.Celular)
+    </div>
+
+    <div class="mb-3">
+        <label for="celular" class="form-label">Facebook</label>
+        <input type="text" asp-for="Faceboo" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="celular" class="form-label">Instagram</label>
+        <input type="text" asp-for="Instagram" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="celular" class="form-label">Twitter</label>
+        <input type="text" asp-for="Twitter" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="celular" class="form-label">LinkedIn</label>
+        <input type="text" asp-for="LinkedIn" class="form-control">
+        @Html.ValidationMessageFor(x => x.LinkedIn)
+    </div>
+
+  <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
+  <a class="btn btn-secondary btn-block" asp-controller="Contato" asp-action="Index" role="button">voltar</a>
+</form>
